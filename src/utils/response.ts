@@ -1,14 +1,4 @@
-import express from 'express';
-
-type JSONSuccessResponseHandler = (
-  res: express.Response,
-  data: any
-) => void;
-
-type JSONErrorResponseHandler = (
-  res: express.Response,
-  message: string
-) => any;
+import { JSONSuccessResponseHandler, JSONErrorResponseHandler } from '../types/response.types';
 
 export const ok: JSONSuccessResponseHandler = (res, data) => {
   res.json({
