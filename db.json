@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "username": "werdna521",
+      "name": "Andrew Cen",
+      "password": "$2b$10$6pnMKy6/MsQtd2gTgzG1i.axG2N2zKBX3g/bryImBiwgFdIafu26u"
+    },
+    {
+      "username": "melissa205",
+      "name": "Melissa",
+      "password": "$2b$10$lhjt7A3rAPH6Yg2ALos9VeF0dQ7PdaEmLsdrHxDLNdBX5smyLpa6S"
+    }
+  ]
+}
