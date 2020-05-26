@@ -22,7 +22,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "prestart": "yarn build",
+    "build-app": "yarn --cwd app build",
+    "prestart": "yarn build && yarn build-app",
     "start": "node ."
   },
   "devDependencies": {

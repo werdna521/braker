@@ -1,9 +1,21 @@
 import bcrypt from 'bcrypt';
 import * as response from '../utils/response';
 import * as repository from '../db/repository';
-import { AuthControllerAuthenticate, AuthControllerRegister } from '../types/controller.types';
+import { AuthControllerAuthenticate, AuthControllerRegister, ControllerGetNoParams } from '../types/controller.types';
 import { _messages } from '../utils/variables';
 import { setTokenCookie } from '../utils/cookie';
+
+export const superman: ControllerGetNoParams = async (req, res) => {
+  const { username } = req.cookies.user;
+  const { name } = repository.retrieveUserData(username);
+  response.ok(res, { username, name });
+};
+
+export const signOut: ControllerGetNoParams = async (req, res) => {
+  const { username } = req.cookies.user;
+  setTokenCookie(res, username, 0);
+  response.ok(res, { message: 'Sign out successful' });
+};
 
 export const authenticate: AuthControllerAuthenticate = async (req, res) => {
   const { username, password } = req.body;
