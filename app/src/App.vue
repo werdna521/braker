@@ -1,16 +1,18 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-  </div>
+  <v-app>
+    <v-content>
+      <router-view></router-view>
+    </v-content>
+  </v-app>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+  import Vue from 'vue';
 
-export default Vue.extend({
-  name: 'App'
-});
+  export default Vue.extend({
+    name: 'App'
+  });
 </script>
 
-<style>
+<style lang="scss">
 </style>
