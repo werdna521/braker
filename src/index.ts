@@ -7,7 +7,7 @@ import authRouter from './routes/auth.route';
 import postRouter from './routes/post.route';
 import config from './config/config';
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 const app: express.Application = express();
 
 app.use(helmet());
